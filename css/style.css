@@ -1,0 +1,398 @@
+
+/*****************GLOBAL********************/
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0 auto;
+	background: linear-gradient(hsl(215, 75%, 15%),hsla(240, 50%, 1%, 0.95));
+	background-image: url(../img/main_background.png);
+	max-width: 1600px;
+	font: 400 14px / 2em  Montserrat, Arial, sans-serif;
+	color: hsl(213, 19%, 70%);
+}
+a {
+	color: hsl(0, 0%, 100%);
+	text-decoration: none;
+}
+
+a:hover {
+   color: hsl(360, 100%, 60%);
+}
+
+img { 
+	max-width: 100%;
+	height: auto; 
+}
+
+.container {
+	max-width: 1176px;
+	width: 100%; 
+	margin: 0 auto;
+}
+
+span {
+	color: hsl(215, 59%, 40%);
+}
+
+.button {
+	width: 153px;
+	height: 41px;
+	background-color: hsl(215, 75%, 15%);
+	border: 2px solid hsl(215, 59%, 44%);
+}
+
+.button:hover {
+	background-color: hsl(0, 0%, 100%);
+	cursor: pointer;
+}
+
+.button:hover a { /*animacja txt*/
+	color: hsl(360, 100%, 60%);
+}
+
+/*************HEADER********************/
+
+.page-header {
+	margin-top: 50px;
+}
+
+.page-header > .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo p {
+	display: inline-block;
+	margin: 0;
+	padding: 0 6px;
+	color: hsl(0, 0%, 100%);
+	font-size: 1.8em;
+	font-weight: 700;
+}
+
+.logo:hover p {
+	color: hsl(360, 100%, 60%);
+}
+
+/******************nav***************/
+
+nav {
+	text-align: center;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+nav li {
+	display: inline-block;
+	width: 120px;
+}
+
+nav li a {
+	display: inline-block;
+	padding: 0 10px;
+}
+
+nav ul li {
+	text-align: center;
+}
+
+nav ul ul li {
+	display: block;
+}
+
+nav ul ul {
+	display: none;
+}
+
+nav li:hover ul {
+	display: block;
+}
+
+nav li ul {
+	position: absolute;
+}
+
+nav ul li ul li a {
+	display: block;
+	padding: 0;
+}
+
+/****************HERO********************/
+
+.title {
+	margin: 140px 0 160px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title h1 {
+	margin: 0;
+	color: hsl(0, 0%, 100%);
+	font-weight: 400;
+	font-size: 38px;
+	line-height: 1.47em;
+	letter-spacing: .023em;
+}
+
+.title p {
+	margin: 0;
+	color: hsl(215, 59%, 40%);
+	line-height: 4em;
+	letter-spacing: .025em;
+}
+
+.cta {
+	margin: 20px;
+}
+
+.screens1 {
+   background-image: url(../img/Vector_Smart_Object_copy.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.screen {
+	box-shadow: 0 0 96px hsl(215, 83%, 12%);
+}
+
+.screens1 img {
+	margin-right: 4%;
+}
+
+.screens1 img:last-child {
+	margin-right: 0;
+}
+
+/***********INTRO*****************/
+/* na mobile headphones.png znika*/
+
+
+/************FEATURES************/
+
+.main-features {
+	box-shadow: 0 0 96px hsl(215, 83%, 12%);
+}
+
+.ellipse1 {
+	width: 639px;
+	height: 102px;
+	box-shadow: inset 0 0 20px hsla(215, 80%, 33%, 0.35);
+	background-color: hsl(0, 0%, 100%);
+	background-image: linear-gradient(to bottom, hsl(240, 50%, 2%) 0%, hsl(215, 74%, 15%) 100%);
+	opacity: 0.55;
+}
+
+.ellipse2 {
+	width: 429px;
+	height: 59px;
+	box-shadow: inset 0 0 20px hsla(215, 80%, 33%, 0.349);
+	background-color: hsl(0, 0%, 100%);
+	background-image: linear-gradient(to bottom, hsl(240, 50%, 2%) 0%, hsl(215, 74%, 15%) 100%);
+	opacity: 0.55;
+}
+
+/**********FEATURES-PERSPECTIVE************/
+
+
+/**************TESTIMONIALS****************/
+
+.testimonials-section {
+	background-color: hsl(215, 75%, 15%);
+	opacity: 0.25;
+}
+
+.testimonials-section img {
+	opacity: 0.5;
+}
+.testimonial p {
+	padding-top: 146px;
+	/* Style for "Consectetu" */
+width: 736px;
+height: 60px;
+color: #66778e;
+font-family: Montserrat;
+font-size: 19px;
+font-weight: 400;
+line-height: 38.39px;
+/* Text style for "C, onsecte" */
+letter-spacing: 0.48px;
+}
+
+.testimonial-author {
+	padding-top: 55px;
+}
+
+.bullet {
+	width: 10px;
+	height: 9px;
+	border: 2px solid #213a61;
+	background-color: #213a61;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 10px; 
+}
+
+.active {
+	background-color: #335a95;
+}
+
+.bullets {
+	padding: 57px 0 110px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/*************DOWNLOAD**************/
+
+.download-app-section h2 {
+	padding-top: 111px;
+width: 516px;
+height: 113px;
+color: #66778e;
+font-size: 11px;
+font-weight: 400;
+line-height: 28.8px;
+/* Text style for "D, iscover" */
+color: #ffffff;
+font-size: 29px;
+letter-spacing: 0.72px;
+/* Text style for "" */
+color: #ffffff;
+font-size: 19px;
+letter-spacing: 0.48px;
+}
+
+.download-app-section p {
+	padding-top: 111px;
+	letter-spacing: 0.28px;
+}
+
+.screens2 {
+	padding-top: 93px;
+	/* Style for "Coeluso" */
+width: 671px;
+height: 538px;
+}
+
+.main2 {
+	/* Style for "Warstwa 1" */
+width: 292px;
+height: 538px;
+box-shadow: 0 0 200px rgba(0, 0, 0, 0.55);
+}
+
+.logon2 {
+	/* Style for "Warstwa 3" */
+width: 215px;
+height: 381px;
+box-shadow: 0 0 96px #051a37;
+opacity: 0.6;
+}
+
+.play2 {
+	/* Style for "Warstwa 4" */
+width: 214px;
+height: 381px;
+box-shadow: 0 0 96px #051a37;
+opacity: 0.6;
+}
+
+.download {
+	padding: 48px 0 103px 0;
+border: 2px solid #0f294c;
+background-color: #010206;
+}
+
+/*************FOOTER*******************/
+
+.page-footer {
+	border-top: 1px solid hsl(0, 0%, 25%);
+	margin-bottom: 71px;
+}
+
+.page-footer > .container {
+   padding: 40px 0;
+   display: flex;
+   justify-content: space-between;
+   text-align: initial;
+}
+
+.footer-nav-items {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   line-height: 16px;
+}
+
+.footer-nav-items li {
+	padding: 0px 25px 0 0;
+   display: inline-block;
+}
+
+.footer-nav-items li a {
+   font-size: 16px;
+   color: hsl(215, 75%, 15%);
+	font-weight: 700;
+	
+	/* Style for "Homepage" */
+width: 250px;
+height: 14px;
+color: #14396a;
+font-family: Montserrat;
+font-size: 11px;
+font-weight: 700;
+line-height: 73.59px;
+}
+
+.footer-nav-items li a:hover {
+   color: hsl(360, 100%, 60%);
+}
+.page-footer p {
+   margin: 0;
+   display: inline-block;
+   font-size: 16px;
+   color: hsl(215, 75%, 15%);
+   font-weight: 700;
+	line-height: 16px;
+	
+	/* Style for "Copyright" */
+width: 272px;
+height: 15px;
+color: #14396a;
+font-family: Montserrat;
+font-size: 11px;
+font-weight: 400;
+line-height: 73.59px;
+/* Text style for "Copyright" */
+font-family: "Montserrat - Regular";
+font-weight: 400;
+/* Text style for "ⓒ" */
+font-family: "Koz Go Pr 6 N";
+font-weight: 400;
+}
+
