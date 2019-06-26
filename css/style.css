@@ -1,11 +1,16 @@
 
 /*****************GLOBAL********************/
+
+:root {
+	font-size: 14px;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: smooth;/*????*/
 }
 
 body {
@@ -13,7 +18,7 @@ body {
 	background: linear-gradient(hsl(215, 75%, 15%),hsla(240, 50%, 1%, 0.95));
 	background-image: url(../img/main_background.png);
 	max-width: 1600px;
-	font: 400 14px / 2em  Montserrat, Arial, sans-serif;
+	font: 400 1rem / 2rem  Montserrat, Arial, sans-serif;
 	color: hsl(213, 19%, 70%);
 }
 a {
@@ -34,6 +39,16 @@ img {
 	max-width: 1176px;
 	width: 100%; 
 	margin: 0 auto;
+	display: flex;
+}
+
+h2 {
+	margin: 0;
+	color: hsl(0, 0%, 100%);
+	font-size: 2.42rem;
+	font-weight: 400;
+	line-height: 4rem;
+	letter-spacing: .0715rem;
 }
 
 span {
@@ -41,29 +56,28 @@ span {
 }
 
 .button {
-	width: 153px;
-	height: 41px;
 	background-color: hsl(215, 75%, 15%);
 	border: 2px solid hsl(215, 59%, 44%);
+	border-radius: 25px;
 }
 
 .button:hover {
 	background-color: hsl(0, 0%, 100%);
 	cursor: pointer;
+	border: 3px solid hsl(360, 100%, 60%);
 }
 
-.button:hover a { /*animacja txt*/
+.button:hover a { /*txt animation*/
 	color: hsl(360, 100%, 60%);
 }
 
 /*************HEADER********************/
 
 .page-header {
-	margin-top: 50px;
+	margin-top: 11vh;
 }
 
 .page-header > .container {
-	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -78,9 +92,9 @@ span {
 .logo p {
 	display: inline-block;
 	margin: 0;
-	padding: 0 6px;
+	padding: 0 0.44rem;
 	color: hsl(0, 0%, 100%);
-	font-size: 1.8em;
+	font-size: 1.72rem;
 	font-weight: 700;
 }
 
@@ -139,9 +153,9 @@ nav ul li ul li a {
 /****************HERO********************/
 
 .title {
-	margin: 140px 0 160px 0;
+	margin: 10rem 0 11.45rem 0;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;/*row flex: wrap:*/
 	justify-content: center;
 	align-items: center;
 }
@@ -150,20 +164,20 @@ nav ul li ul li a {
 	margin: 0;
 	color: hsl(0, 0%, 100%);
 	font-weight: 400;
-	font-size: 38px;
-	line-height: 1.47em;
-	letter-spacing: .023em;
+	font-size: 2.72rem;
+	line-height: 4rem;
+	letter-spacing: .0715rem;
 }
 
 .title p {
 	margin: 0;
 	color: hsl(215, 59%, 40%);
-	line-height: 4em;
-	letter-spacing: .025em;
+	line-height: 4rem;
+	letter-spacing: .0715rem;
 }
 
 .cta {
-	margin: 20px;
+	margin-top: 3rem;
 }
 
 .screens1 {
@@ -177,11 +191,11 @@ nav ul li ul li a {
 }
 
 .screen {
-	box-shadow: 0 0 96px hsl(215, 83%, 12%);
+	box-shadow: 0 0 7rem hsl(215, 83%, 12%);
 }
 
 .screens1 img {
-	margin-right: 4%;
+	margin-right: 3rem;
 }
 
 .screens1 img:last-child {
@@ -189,62 +203,164 @@ nav ul li ul li a {
 }
 
 /***********INTRO*****************/
-/* na mobile headphones.png znika*/
+/* no headphones.png on mobile*/
 
+.intro-section {
+	margin-top: 6.42rem;
+	display: flex;
+}
+
+.intro {
+	padding: 0 6.178rem 0 3.85rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.intro p {
+	margin: 0;
+	padding-top: 1rem;
+}
+
+.view-more {
+	margin-top: 1.4rem;
+	align-self: flex-start;
+}
 
 /************FEATURES************/
+
+.features-section {
+	margin-top: 6.5rem;
+}
+
+.features-section > .container {
+	flex-direction: column;
+	align-items: center;
+}
+
+.columns {
+	margin-top: 17vh;
+	display: flex;
+	justify-content: space-between;
+}	
+
+.col {
+	flex: 1;
+}
+
+.phone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.feature {
+	margin-bottom: 12vh;
+}
+
+h4 {
+	color: hsl(0, 0%, 100%);
+	font-size: 1.38rem;
+	font-weight: 400;
+	line-height: 2rem;
+	letter-spacing: .0715rem;
+}
+
+.feature p {
+	margin: 0;
+}
 
 .main-features {
 	box-shadow: 0 0 96px hsl(215, 83%, 12%);
 }
 
-.ellipse1 {
-	width: 639px;
-	height: 102px;
-	box-shadow: inset 0 0 20px hsla(215, 80%, 33%, 0.35);
-	background-color: hsl(0, 0%, 100%);
-	background-image: linear-gradient(to bottom, hsl(240, 50%, 2%) 0%, hsl(215, 74%, 15%) 100%);
-	opacity: 0.55;
-}
-
-.ellipse2 {
-	width: 429px;
-	height: 59px;
-	box-shadow: inset 0 0 20px hsla(215, 80%, 33%, 0.349);
-	background-color: hsl(0, 0%, 100%);
-	background-image: linear-gradient(to bottom, hsl(240, 50%, 2%) 0%, hsl(215, 74%, 15%) 100%);
-	opacity: 0.55;
-}
-
 /**********FEATURES-PERSPECTIVE************/
 
+.features-perspective-section {
+	margin: 10rem 0 6.4rem 0;
+	display: flex;
+}
+
+.perspective {
+	padding: 0 3rem 0 15.15rem;/*vh*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.perspective .icon {
+	margin-bottom: 1.5rem;
+}
+
+h3 {
+	margin: 0;
+	color: hsl(0, 0%, 100%);
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 4rem;
+	letter-spacing: .0715rem;
+}
+
+.perspective p {
+	margin: 1rem 0 0 0;
+}
 
 /**************TESTIMONIALS****************/
 
 .testimonials-section {
-	background-color: hsl(215, 75%, 15%);
-	opacity: 0.25;
+	background-color: hsl(215, 75%, 15%, 0.25);
+	position: relative;
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
 }
 
-.testimonials-section img {
+.testimonials-section::after {
+	content: "";
+	background-image: url(../img/testimonials_background.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 	opacity: 0.5;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	/* z-index: -1;    */
+ }
+
+.testimonial {
+	max-width: 740px;
+	width: 100%; 
+	margin: 0 auto;
+	margin-top: 6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-.testimonial p {
-	padding-top: 146px;
-	/* Style for "Consectetu" */
-width: 736px;
-height: 60px;
-color: #66778e;
-font-family: Montserrat;
-font-size: 19px;
-font-weight: 400;
-line-height: 38.39px;
-/* Text style for "C, onsecte" */
-letter-spacing: 0.48px;
+
+.testimonial > p {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.7rem;
+	letter-spacing: .0715rem;
+	text-align: center;
 }
 
 .testimonial-author {
-	padding-top: 55px;
+	margin-top: 3.8rem;
+	display: flex;
+	justify-content: center;
+}
+
+.bullets {
+	padding: 4rem 0 6rem 0;
+	margin: 0;
+	text-align: center;
 }
 
 .bullet {
@@ -259,12 +375,6 @@ letter-spacing: 0.48px;
 
 .active {
 	background-color: #335a95;
-}
-
-.bullets {
-	padding: 57px 0 110px 0;
-	margin: 0 auto;
-	text-align: center;
 }
 
 /*************DOWNLOAD**************/

@@ -15,6 +15,13 @@
          <div class="container">
             <a href="#" class="logo">
                <img src="img/Logo.png" alt="Coeluso logo">
+               <!-- For responsive images, use srcset and sizes 
+                  <img src="/images/sunset-360.jpg"
+                  alt="Picture of a Ha Long Bay sunset"
+                  srcset="/images/sunset-360.jpg 360w,
+                        /images/sunset-720.jpg 720w,
+                        /images/sunset-1440.jpg 1440w>"
+                  sizes="(min-width: 800px) 720px, 360px">-->
                <p>Coeluso</p>
             </a>
             
@@ -77,12 +84,12 @@
       </section>
 
       <section class="page-section intro-section">
-         <img class="headphones" src="img/Headphones.png" alt="headphones">
+         <img class="headphones-intro" src="img/Headphones_intro.png" alt="headphones">
          <div class="intro">
             <h2><span>Coeluso</span> is free PSD template</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. Curabitur aliquet lacus sit amet metus molestie ultrices vel in nibh. Sed sit amet feugiat turpis, ut bibendum velit. In et felis mauris. </p>
-            <div class="button">
-               <a href="#" class="btn btn-default">View more</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. Curabitur aliquet lacus sit amet metus molestie ultrices vel in nibh. Sed sit amet feugiat turpis, ut bibendum velit. In et felis mauris.</p>
+            <div class="button view-more">
+               <a href="#">View more</a>
             </div>
          </div>
       </section>
@@ -90,61 +97,70 @@
       <section class="page-section features-section">
          <div class="container">
             <h2><span>Coeluso</span> with a lot of features</h2>
-            <img class="main-features" src="img/Warstwa.1.png" alt="app main screen">
-            <img class="ellipse1" src="img/Ellipse_1.png" alt="app main screen background_1">
-            <img class="ellipse2" src="img/Ellipse_1.png" alt="app main screen background_2">
-            <div class="speaker">
-               <img class="icon" src="img/Speaker.png" alt="speaker icon">
-               <h4>Lorem ipsum dolor sit amet</h4>
-               <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
-            </div>
-            <div class="activity">
-               <img class="icon" src="img/Activity.png" alt="activity icon">
-               <h4>Lorem ipsum dolor sit amet</h4>
-               <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
-            </div>
-            <div class="headphones">
-               <img class="icon" src="img/Headphones.icon.png" alt="headphones icon">
-               <h4>Lorem ipsum dolor sit amet</h4>
-               <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
-            </div>
-            <div class="cd">
-               <img class="icon" src="img/CD.png" alt="cd icon">
-               <h4>Lorem ipsum dolor sit amet</h4>
-               <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
+            <div class="columns">
+               <div class="col">
+                  <div class="speaker feature">
+                     <img class="icon" src="img/Speaker.png" alt="speaker icon">
+                     <h4>Lorem ipsum dolor sit amet</h4>
+                     <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
+                  </div>
+                  <div class="activity feature">
+                     <img class="icon" src="img/Activity.png" alt="activity icon">
+                     <h4>Lorem ipsum dolor sit amet</h4>
+                     <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
+                  </div>
+               </div>
+               <div class="col phone">
+                  <img class="main-features" src="img/Warstwa.1.png" alt="app main screen">
+                  <!-- <img class="ellipse1" src="img/Ellipse_1.png" alt="app main screen background_1"> -->
+                  <!-- <img class="ellipse2" src="img/Ellipse_1.png" alt="app main screen background_2"> -->
+               </div>
+               <div class="col">
+                  <div class="headphones feature">
+                     <img class="icon" src="img/Headphones.icon.png" alt="headphones icon">
+                     <h4>Lorem ipsum dolor sit amet</h4>
+                     <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
+                  </div>
+                  <div class="cd feature">
+                     <img class="icon" src="img/CD.png" alt="cd icon">
+                     <h4>Lorem ipsum dolor sit amet</h4>
+                     <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
 
       <section class="page-section features-perspective-section">
-         <img class="sreens" src="img/Screens_graphic.png" alt="app screens">
-         <h3>Lorem ipsum dolor sit amet</h3>
-         <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
-         <img class="icon" src="img/on_icon.png" alt="power on icon">
+         <div class="perspective">
+            <img class="icon" src="img/on_icon.png" alt="power on icon">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Consectetur adipiscing elit. Ut fermentum condimentum fafi massa, sagittis dolor feugiat id. Morbi elementum iaculis elit non lorem. Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
+         </div>
+         <img class="sreens2" src="img/Screens_graphic.png" alt="app screens">
       </section>
 
       <section class="page-section testimonials-section">
-         <img class="testimonials-background" src="img/testimonials_background.png" alt="background">
-         <div class="testimonial">
+         <div class="testimonial"> 
             <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
             <div class="testimonial-author">
                <img class="photo" src="img/photo.png" alt="user photo">
                <p>Patryk Wasik, Graphic designer at SYMU</p>
             </div>
-         </div>
-         <div class="bullets">
-            <div class="bullet active"></div>
-            <div class="bullet"></div>
-            <div class="bullet"></div>
-            <div class="bullet"></div>
-            <div class="bullet"></div>
+            <div class="bullets">
+               <div class="bullet active"></div>
+               <div class="bullet"></div>
+               <div class="bullet"></div>
+               <div class="bullet"></div>
+               <div class="bullet"></div>
+            </div>
          </div>
       </section>
 
       <section class="page-section download-app-section">
          <h2>Discover new music & stuff</h2>
          <p>Consectetur adipiscing elit. Ut fermentum condimentum massa, in sagittis dolor feugiat id. Morbi pharetra elit non lorem elementum iaculis. </p>
-         <div class="screens2">
+         <div class="screens3">
             <img class="screen logon2" src="img/Warstwa.3.png" alt="app logon screen">
             <img class="screen main2" src="img/Warstwa.2.png" alt="app main screen">
             <img class="screen play2" src="img/Warstwa.4.png" alt="app play screen">
