@@ -7,6 +7,7 @@
 
 * {
 	box-sizing: border-box;
+	outline: none; /*? */
 }
 
 html {
@@ -15,19 +16,21 @@ html {
 
 body {
 	margin: 0 auto;
+	padding: 0;
 	background: linear-gradient(hsl(215, 75%, 15%),hsla(240, 50%, 1%, 0.95));
 	background-image: url(../img/main_background.png);
 	max-width: 1600px;
 	font: 400 1rem / 2rem  Montserrat, Arial, sans-serif;
 	color: hsl(213, 19%, 70%);
 }
+
 a {
 	color: hsl(0, 0%, 100%);
 	text-decoration: none;
 }
 
 a:hover {
-   color: hsl(360, 100%, 60%);
+	color: hsl(360, 100%, 60%);
 }
 
 img { 
@@ -48,7 +51,7 @@ h2 {
 	font-size: 2.42rem;
 	font-weight: 400;
 	line-height: 4rem;
-	letter-spacing: .0715rem;
+	letter-spacing: 1px;
 }
 
 span {
@@ -56,18 +59,23 @@ span {
 }
 
 .button {
-	background-color: hsl(215, 75%, 15%);
+	background-color: transparent;
 	border: 2px solid hsl(215, 59%, 44%);
-	border-radius: 25px;
-	padding: .5rem;
+	border-radius: 1.78rem;
+	padding: .5rem 2rem;
+	transition: border-color .5s;
+}
+
+.button a {
+	transition: color .5s .1s linear;
 }
 
 .button:hover {
 	cursor: pointer;
-	border: 2px solid hsl(360, 100%, 60%);
+	border-color: hsl(360, 100%, 60%);
 }
 
-.button:hover a { /*txt animation*/
+.button:hover a { 
 	color: hsl(360, 100%, 60%);
 }
 
@@ -75,9 +83,11 @@ span {
 
 .page-header {
 	margin-top: 3vh;
+	
 }
 
 .page-header > .container {
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -96,59 +106,70 @@ span {
 	color: hsl(0, 0%, 100%);
 	font-size: 1.72rem;
 	font-weight: 700;
+	transition: .7s linear; 
 }
 
 .logo:hover p {
 	color: hsl(360, 100%, 60%);
 }
 
-/******************nav***************/
+/******************NAVIGATION***************/
 
-nav {
-	text-align: center;
-}
-
-nav ul {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	position: relative;
-}
-
-nav li {
-	display: inline-block;
-	width: 120px;
-}
-
-nav li a {
-	display: inline-block;
-	padding: 0 10px;
-}
-
-nav ul li {
-	text-align: center;
-}
-
-nav ul ul li {
-	display: block;
-}
-
-nav ul ul {
+.overlay {
+	height: 100%;
+	width: 100%;
 	display: none;
-}
+	position: fixed; 
+	z-index: 1; 
+	left: 0;
+	top: 0;
+	background-color: hsl(360, 100%, 60%);
+ }
 
-nav li:hover ul {
-	display: block;
-}
+ .overlay-content {
+	position: relative;
+	top: 27%; 
+	width: 100%; 
+	text-align: center; 
+	margin-top: 2%; 
+ }
 
-nav li ul {
+ .overlay a {
+	padding: .8rem;
+	text-decoration: none;
+	font-size: 3rem;
+	color:  hsl(215, 59%, 44%);
+	display: block; 
+	transition: .3s; 
+ }
+ 
+ .overlay a:hover, .overlay a:focus {
+	color: hsl(0, 0%, 100%);
+ }
+ 
+ .overlay .closebtn {
 	position: absolute;
-}
+	top: 1.6rem;
+   right: 4.9rem;
+   font-size: 6rem;
+ }
 
-nav ul li ul li a {
-	display: block;
-	padding: 0;
-}
+ .hamburger {
+	font-size: 2.7rem;
+	color: hsl(360, 100%, 60%);
+	cursor: pointer;
+ }
+ 
+ /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap 
+ @media screen and (max-height: 450px) {
+	.overlay a {font-size: 20px}
+	.overlay .closebtn {
+	  font-size: 40px;
+	  top: 15px;
+	  right: 35px;
+	}
+ }
+*/
 
 /****************HERO********************/
 
@@ -166,14 +187,14 @@ nav ul li ul li a {
 	font-weight: 400;
 	font-size: 2.72rem;
 	line-height: 4rem;
-	letter-spacing: .0715rem;
+	letter-spacing: 1px;
 }
 
 .title p {
 	margin: 0;
 	color: hsl(215, 59%, 40%);
 	line-height: 4rem;
-	letter-spacing: .0715rem;
+	letter-spacing: 1px;
 }
 
 .cta {
@@ -263,7 +284,7 @@ h4 {
 	font-size: 1.38rem;
 	font-weight: 400;
 	line-height: 2rem;
-	letter-spacing: .0715rem;
+	letter-spacing: 1px;
 }
 
 .feature p {
@@ -285,9 +306,10 @@ h4 {
 	margin: 0 1.2vw 0 6.332vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: flex-start;
+	padding-top: 5%;
 }
+
 .perspective .icon {
 	margin-bottom: 1.5rem;
 }
@@ -298,7 +320,7 @@ h3 {
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 4rem;
-	letter-spacing: .0715rem;
+	letter-spacing: 1px;
 }
 
 .perspective p {
@@ -308,7 +330,7 @@ h3 {
 /**************TESTIMONIALS****************/
 
 .testimonials-section {
-	background-color: hsl(215, 75%, 15%, 0.25);
+	background-color: hsl(216, 70%, 9%);
 	position: relative;
 	display: flex;
 	/* flex-direction: column; */
@@ -328,7 +350,7 @@ h3 {
 	bottom: 0;
 	right: 0;
 	position: absolute;
-	/* z-index: -1;    */
+	/* z-index: -1;    bullets - z-index:1*/
  }
 
 .testimonial {
@@ -347,7 +369,7 @@ h3 {
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 2.7rem;
-	letter-spacing: .0715rem;
+	letter-spacing: 1px;
 	text-align: center;
 }
 
@@ -370,19 +392,23 @@ h3 {
 	padding: 4rem 0 6rem 0;
 	margin: 0;
 	text-align: center;
+	z-index: 1;
 }
 
 .bullet {
-	width: 10px;
-	height: 9px;
+	width: .9rem;
+	height: .9rem;
+	background-color: transparent;
 	border: 2px solid hsl(217, 49%, 25%);
 	border-radius: 50%;
 	display: inline-block;
-	margin: 10px; 
+	margin: .9rem; 
+	transition: background-color .5s;
 }
 
-.active {
+.bullet:hover {
 	background-color: hsl(216, 49%, 39%);
+	cursor: pointer;
 }
 
 /*************DOWNLOAD**************/
@@ -408,7 +434,7 @@ h3 {
 .download-info > p {
 	margin: 3rem 0 0 0;
 	width: 42rem; /*vw*/
-	letter-spacing: .0715rem;
+	letter-spacing: 1px;
 	text-align: center;
 }
 
@@ -420,7 +446,7 @@ h3 {
 }
 
 .download {
-	margin: 3.5rem 0 7rem 0;
+	margin: 3.5rem 0 9rem 0;
 	border: 2px solid hsl(214, 67%, 18%);
 	background-color: hsl(228, 71%, 1%);
 }
@@ -428,12 +454,12 @@ h3 {
 /*************FOOTER*******************/
 
 .page-footer {
-	border-top: 1px solid hsl(0, 0%, 25%);
 	/* margin-bottom: 5rem;vh */
 }
 
 .page-footer > .container {
-   /* padding: 40px 0; */
+	/* padding: 40px 0; */
+	border-top: 1px solid hsl(214, 67%, 18%);
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -447,15 +473,15 @@ h3 {
 }
 
 .footer-nav-items li {
-	padding: 0px 25px 0 0;
+	padding-right: 1.8rem;
    display: inline-block;
 }
 
 .footer-nav-items li a {
-   font-size: 16px;
-   color: hsl(215, 75%, 15%);
-	font-weight: 700;
-	line-height: 73.59px;
+   font-size: 1.2rem;
+   color: hsl(214, 67%, 18%);
+	font-weight: 600;
+	line-height: 5rem;
 }
 
 .footer-nav-items li a:hover {
@@ -465,10 +491,10 @@ h3 {
 .page-footer p {
    margin: 0;
    display: inline-block;
-   font-size: 16px;
-   color: hsl(215, 75%, 15%);
-   font-weight: 700;
+   font-size: 1.2rem;
+   color: hsl(214, 67%, 18%);
+   font-weight: 600;
 	/* line-height: 16px; */
-	line-height: 73.59px;
+	line-height: 5rem;
 }
 

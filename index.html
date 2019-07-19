@@ -15,56 +15,25 @@
          <div class="container">
             <a href="#" class="logo">
                <img src="img/Logo.png" alt="Coeluso logo">
-               <!-- For responsive images, use srcset and sizes 
+               <!--<For responsive images, use srcset and sizes 
                   <img src="/images/sunset-360.jpg"
                   alt="Picture of a Ha Long Bay sunset"
                   srcset="/images/sunset-360.jpg 360w,
                         /images/sunset-720.jpg 720w,
                         /images/sunset-1440.jpg 1440w>"
-                  sizes="(min-width: 800px) 720px, 360px">-->
+                  sizes="(min-width: 800px) 720px, 360px"-->
                <p>Coeluso</p>
             </a>
-            
-            <nav>
-               <ul>
-                  <li><a href="#">Homepage</a>
-                     <ul>
-                        <li><a href="#">Szyszki</a></li>
-                        <li><a href="#">Ściółka</a></li>
-                        <li><a href="#">Muł</a></li>
-                     </ul>
-                  </li>
-                  <li><a href="#">Services</a>
-                     <ul>
-                        <li><a href="#">Szyszki</a></li>
-                        <li><a href="#">Ściółka</a></li>
-                        <li><a href="#">Muł</a></li>
-                     </ul>
-                  </li>
-                  <li><a href="#">About Us</a>
-                     <ul>
-                        <li><a href="#">Szyszki</a></li>
-                        <li><a href="#">Ściółka</a></li>
-                        <li><a href="#">Muł</a></li>
-                     </ul>
-                  </li>
-                  <li><a href="#">Contact</a>
-                     <ul>
-                        <li><a href="#">Szyszki</a></li>
-                        <li><a href="#">Ściółka</a></li>
-                        <li><a href="#">Muł</a></li>
-                     </ul>
-                  </li>
-               </ul>
-                  <!--hamburger
-               <input type="checkbox" id="menu-button">
-               <label for="menu-button">☰</label>
-               <ul class="container">
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Other link</a></li>
-               </ul> -->
-            </nav>
+            <div id="myNav" class="overlay">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+               <div class="overlay-content">
+                  <a href="#">Homepage</a>
+                  <a href="#">Services</a>
+                  <a href="#">About Us</a>
+                  <a href="#">Contact</a>
+               </div>
+            </div>
+            <span class="hamburger" onclick="openNav()">&#9776;</span>
          </div>
       </header>
 
@@ -112,8 +81,6 @@
                </div>
                <div class="col phone">
                   <img class="main-features" src="img/Warstwa.1.png" alt="app main screen">
-                  <!-- <img class="ellipse1" src="img/Ellipse_1.png" alt="app main screen background_1"> -->
-                  <!-- <img class="ellipse2" src="img/Ellipse_1.png" alt="app main screen background_2"> -->
                </div>
                <div class="col">
                   <div class="headphones feature">
@@ -148,11 +115,11 @@
                <p>Patryk Wasik, <span>Graphic designer at SYMU</span></p>
             </div>
             <div class="bullets">
-               <div class="bullet active"></div>
-               <div class="bullet"></div>
-               <div class="bullet"></div>
-               <div class="bullet"></div>
-               <div class="bullet"></div>
+               <div class="bullet"><a href="#"></a></div>
+               <div class="bullet"><a href="#"></a></div>
+               <div class="bullet"><a href="#"></a></div>    
+               <div class="bullet"><a href="#"></a></div>
+               <div class="bullet"><a href="#"></a></div>
             </div>
          </div>
       </section>
@@ -173,10 +140,9 @@
       </section>
 
       <footer class="page-footer">
-         <div class="footer-border"></div>
          <div class="container">
             <ul class="footer-nav-items">
-               <li><a href="#" class="active">Homepage</a></li>
+               <li><a href="#">Homepage</a></li>
                <li><a href="#">Services</a></li>
                <li><a href="#">About Us</a></li>
                <li><a href="#">Contact</a></li>
@@ -184,6 +150,17 @@
             <p>Copyright &copy; 2015. All rights reserved by Coeluso</p>
          </div>
       </footer>
+
+      <script> </script> <!--used for Chrome bug elimination - transition animation is rendering while page is loading-->
+      <script>
+         function openNav() {
+            document.getElementById("myNav").style.display = "block";
+         }
+         
+         function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+         }
+      </script>
 
    </body>
 </html>
