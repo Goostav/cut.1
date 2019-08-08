@@ -7,11 +7,6 @@
 
 * {
 	box-sizing: border-box;
-	outline: none; /*? */
-}
-
-html {
-	scroll-behavior: smooth;/*????*/
 }
 
 body {
@@ -115,6 +110,10 @@ span {
 
 /******************NAVIGATION***************/
 
+.menu-open {
+	overflow-y: hidden;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -149,8 +148,8 @@ span {
  
  .overlay .closebtn {
 	position: absolute;
-	top: 1.6rem;
-   right: 4.9rem;
+	top: 2rem;
+   right: 11.4rem;
    font-size: 6rem;
  }
 
@@ -223,6 +222,10 @@ span {
 	margin-right: 0;
 }
 
+.welcome {
+	/* flex-basis: auto; */
+}
+
 /***********INTRO*****************/
 /* no headphones.png on mobile*/
 
@@ -271,6 +274,7 @@ span {
 
 .phone {
 	display: flex;
+	/* flex-basis: auto; */
 	justify-content: center;
 	align-items: center;
 }

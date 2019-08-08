@@ -10,7 +10,7 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
    </head>
    
-   <body>
+   <body id="noScroll">
       <header class="page-header">
          <div class="container">
             <a href="#" class="logo">
@@ -155,10 +155,12 @@
       <script>
          function openNav() {
             document.getElementById("myNav").style.display = "block";
+            document.querySelector("#noScroll").classList.add("menu-open");
          }
          
          function closeNav() {
             document.getElementById("myNav").style.display = "none";
+            document.querySelector("#noScroll").classList.remove("menu-open");
          }
       </script>
 
